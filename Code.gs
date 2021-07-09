@@ -78,7 +78,7 @@ function updateContributions(sheet, contributions) {
 }
 
 function getTradersContributions(config) {
-  var sheets = DriveApp.getFolderById('1xB5CVNN8wZIfeygjIvHhX7bdQOeF7xxQ').getFilesByType(MimeType.GOOGLE_SHEETS);
+  var sheets = DriveApp.getFolderById(config.folder).getFilesByType(MimeType.GOOGLE_SHEETS);
   var tradersValues = new Map();
   let stopCount = 0;
   while (sheets.hasNext()) {
